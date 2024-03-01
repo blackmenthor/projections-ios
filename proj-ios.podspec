@@ -9,6 +9,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/ngageoint/projections-ios.git', :tag => s.version }
   s.requires_arc     = true
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  s.xcconfig = { 
+    "CLANG_CXX_LANGUAGE_STANDARD" => "c++17",
+    "CLANG_CXX_LIBRARY" => "libc++"
+  }
 
   s.platform         = :ios, '12.0'
   s.ios.deployment_target = '12.0'
